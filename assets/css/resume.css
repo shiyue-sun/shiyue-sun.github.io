@@ -1,0 +1,57 @@
+/* Résumé page styles · Shiyue portfolio. Loads after case-study.css. */
+
+.resume { padding: clamp(72px, 10vw, 140px) 0 0; }
+.resume__intro { display: flex; flex-direction: column; gap: 24px; }
+.resume__contact { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 17px; }
+.resume__contact a { font-weight: 600; }
+
+/* Sections: label on the left, content on the right */
+.resume__sections { display: flex; flex-direction: column; }
+.resume__sec {
+  display: grid; gap: 16px 40px; grid-template-columns: 200px minmax(0, 1fr);
+  border-top: 1px solid var(--line); padding: 36px 0 44px;
+}
+.resume__sec > .label { padding-top: 6px; }
+@media (max-width: 760px) {
+  .resume__sec { grid-template-columns: minmax(0, 1fr); padding: 28px 0 36px; }
+  .resume__sec > .label { padding-top: 0; }
+}
+
+.resume__summary { font-size: clamp(19px, 1.9vw, 22px); line-height: 1.5; letter-spacing: -.012em; color: var(--ink-2); max-width: 760px; }
+
+/* Experience */
+.job + .job { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line-soft); }
+.job__head { display: flex; flex-direction: column; gap: 6px; }
+.job__company { font-size: 17px; color: var(--ink-2); }
+.job__company span { color: var(--muted); }
+.job__meta { margin-top: 2px; }
+
+.team { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+.team__name { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.team__dates { font-weight: 400; color: var(--muted); }
+.team__dates::before { content: "· "; }
+@media (max-width: 560px) {
+  .team__dates { display: block; margin-top: 2px; font-size: 15px; }
+  .team__dates::before { content: none; }
+}
+
+.points { display: flex; flex-direction: column; gap: 10px; max-width: 760px; }
+.job__head + .points { margin-top: 20px; }
+.points li { position: relative; padding-left: 20px; font-size: 17px; line-height: 1.6; color: var(--ink-2); }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .7em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--faint);
+}
+
+/* Education */
+.degrees { display: flex; flex-direction: column; gap: 20px; }
+.degree { display: flex; flex-direction: column; gap: 4px; }
+.degree__title { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.degree__school { font-size: 17px; color: var(--ink-2); }
+.degree__school span { color: var(--muted); }
+
+/* Skills */
+.skills { display: flex; flex-direction: column; gap: 22px; max-width: 760px; }
+.skills div { display: flex; flex-direction: column; gap: 4px; }
+.skills dt { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.skills dd { margin: 0; font-size: 17px; line-height: 1.6; color: var(--ink-2); }

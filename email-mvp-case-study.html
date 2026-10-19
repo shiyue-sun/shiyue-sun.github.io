@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From segment to send · Engage Studio case study · Shiyue</title>
+<meta name="description" content="Designing Treasure AI’s first email campaign product as the sole designer: research, design decisions and results from Engage Studio.">
+<meta name="author" content="Shiyue">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="From segment to send · Engage Studio case study">
+<meta property="og:description" content="Designing Treasure AI’s first email campaign product as the sole designer.">
+<meta property="og:image" content="assets/email-mvp/hero-campaign-editor-1600.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D1D1F'/%3E%3Ctext x='16' y='22.5' font-family='-apple-system,Helvetica,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/email-mvp/hero-campaign-editor-1600.webp" imagesrcset="assets/email-mvp/hero-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-campaign-editor-2800.webp 2800w" imagesizes="(min-width: 1400px) 1352px, calc(100vw - 48px)">
+<link rel="stylesheet" href="assets/css/case-study.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wide site-header__inner">
+    <a class="site-header__brand" href="index.html">Shiyue</a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Résumé</a>
+    </nav>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1 · HERO + SUMMARY ============ -->
+<section class="hero" aria-labelledby="title">
+  <div class="wrap hero__intro">
+    <p class="eyebrow">Treasure AI · Engage Studio</p>
+    <h1 class="h1" id="title">Designing Treasure AI’s first email campaign product as the sole designer</h1>
+    <p class="lede">From segment to send: keeping marketers inside Treasure AI.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="summary">
+      <dl class="summary__meta">
+        <div class="stack-sm">
+          <dt class="label">Company</dt>
+          <dd class="body" style="margin:0">Treasure AI <span style="color:var(--muted)">(formerly Treasure Data)</span></dd>
+        </div>
+        <div class="stack-sm">
+          <dt class="label">Role</dt>
+          <dd class="body" style="margin:0">Sole product designer on Engage Studio</dd>
+        </div>
+        <div class="stack-sm">
+          <dt class="label">Team</dt>
+          <dd class="body" style="margin:0">PM, frontend, backend and QA engineers across the US and Japan</dd>
+        </div>
+        <div class="stack-sm">
+          <dt class="label">Timeline</dt>
+          <dd class="body" style="margin:0">Oct 2024 – present</dd>
+        </div>
+      </dl>
+
+      <div class="summary__results">
+        <p class="label">Results so far</p>
+        <div class="summary__stat">
+          <span class="summary__num">64</span>
+          <span class="cap">enterprise accounts adopted since launch</span>
+        </div>
+        <div class="summary__stat">
+          <span class="summary__num">45.11M</span>
+          <span class="cap">emails sent weekly, and still increasing</span>
+        </div>
+        <div class="summary__stat">
+          <span class="summary__num">Core</span>
+          <span class="cap">quickly becoming the company’s new core product</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__visual">
+    <div class="wide">
+      <figure class="shot shot--hero reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-campaign-editor-2800.webp" data-alt="Engage Studio campaign editor: a full-page editor with campaign steps on the left and the email content in focus">
+          <img src="assets/email-mvp/hero-campaign-editor-1600.webp"
+               srcset="assets/email-mvp/hero-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-campaign-editor-2800.webp 2800w"
+               sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+               width="1600" height="900" fetchpriority="high"
+               alt="Engage Studio campaign editor: a full-page editor with campaign steps on the left and the email content in focus">
+        </button>
+        <figcaption class="cap">The Engage Studio campaign editor.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · WHY BUILD THIS ============ -->
+<section class="sec" id="why" aria-labelledby="why-title">
+  <div class="wrap stack">
+    <p class="eyebrow">Why build this</p>
+    <h2 class="h2" id="why-title">Marketers built the audience in Treasure AI. Then they left to send the message.</h2>
+    <p class="body measure">Marketers used Treasure AI (then called Treasure Data) to unify customer data and build segments. To actually reach those people, they exported the segments to a separate email tool. That hand-off added work, and it gave customers a reason to move to platforms that did both. Engage Studio closes the loop, so a campaign goes from segment to send in one place. Most customers would be migrating from mature tools like Braze, so products with a decade’s head start set the bar for the experience.</p>
+  </div>
+
+  <div class="wide mt-lg">
+    <ol class="flow reveal" aria-label="The marketer’s workflow">
+      <li class="flow__step">
+        <p class="label">Step 1</p>
+        <p class="h3">Gather data</p>
+        <p class="cap">Unify customer profiles from every source.</p>
+      </li>
+      <li class="flow__arrow" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </li>
+      <li class="flow__step">
+        <p class="label">Step 2</p>
+        <p class="h3">Create segment</p>
+        <p class="cap">Define who should hear what, and when.</p>
+      </li>
+      <li class="flow__arrow" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </li>
+      <li class="flow__step flow__step--gap">
+        <p class="label label--accent">Step 3 · The gap</p>
+        <p class="h3">Activate</p>
+        <p class="cap">Before: export the segment to another tool to send. Now: create and send the campaign in Engage Studio.</p>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ============ 3 · CONSTRAINTS ============ -->
+  <div class="wrap mt-xl stack" id="constraints">
+    <h3 class="h3">Five constraints shaped every MVP decision.</h3>
+    <ol class="numbered">
+      <li>
+        <div class="numbered__head"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M21 21l-4.6-4.6M13.5 8.5l-5 5M8.5 8.5l5 5"/></svg></span></div>
+        <strong>No researcher, no budget</strong>
+        <p class="cap">Research wasn’t a company priority, so there was no UX researcher and no budget for it.</p>
+      </li>
+      <li>
+        <div class="numbered__head"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 2h4M12 14l3-3"/><circle cx="12" cy="14" r="8"/></svg></span></div>
+        <strong>A tight M1 deadline</strong>
+        <p class="cap">The goal was to start selling the product quickly, so every new pattern had to earn its place.</p>
+      </li>
+      <li>
+        <div class="numbered__head"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span></div>
+        <strong>A new domain</strong>
+        <p class="cap">Marketing automation was new to almost everyone on the team.</p>
+      </li>
+      <li>
+        <div class="numbered__head"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15.7-6L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.7 6L3 16M8 16H3v5"/></svg></span></div>
+        <strong>Waterfall to agile</strong>
+        <p class="cap">Engineering changed its process in the middle of the project.</p>
+      </li>
+      <li>
+        <div class="numbered__head"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5l9.5 4.75L12 12 2.5 7.25z"/><path d="M2.5 12L12 16.75 21.5 12M2.5 16.75L12 21.5l9.5-4.75"/></svg></span></div>
+        <strong>A design system in flight</strong>
+        <p class="cap">The UX team built the new Diamond Design System during the project, so screens had to migrate from the legacy system.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 4 · RESEARCH ============ -->
+<section class="sec sec--alt" id="research" aria-labelledby="research-title">
+  <div class="wrap stack">
+    <p class="eyebrow">Research</p>
+    <h2 class="h2" id="research-title">Research with the people available.</h2>
+    <p class="lede">With no researcher, I ran small interviews in Nov 2024, named the bias openly, and turned what I heard into product decisions.</p>
+  </div>
+
+  <div class="wrap mt-lg stack">
+    <ul class="people">
+      <li class="person">
+        <span class="person__count">1</span>
+        <p class="h4">Sr. Director of Growth Marketing</p>
+      </li>
+      <li class="person">
+        <span class="person__count">1</span>
+        <p class="h4">Sales engineer</p>
+        <p class="cap">A decade of experience selling marketing automation tools</p>
+      </li>
+      <li class="person">
+        <span class="person__count">3</span>
+        <p class="h4">Marketers in the US and Japan</p>
+        <p class="cap">Tested the M1 prototype</p>
+      </li>
+    </ul>
+    <div class="callout">
+      <p class="label label--accent">The bias I named</p>
+      <p class="body">The participants worked at the same company and used the same tool, Marketo. I weighed their preferences with that in mind instead of treating them as universal.</p>
+    </div>
+  </div>
+
+  <div class="wrap mt-lg">
+    <figure class="shot reveal">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/journey-map-focus-2800.webp" data-alt="Campaign user journey map, focused on the roles and the content, audience, build and testing stages">
+        <img src="assets/email-mvp/journey-map-focus-1600.webp"
+             srcset="assets/email-mvp/journey-map-focus-1600.webp 1600w, assets/email-mvp/journey-map-focus-2800.webp 2800w"
+             sizes="(min-width: 1080px) 1032px, calc(100vw - 48px)"
+             width="1600" height="1657" loading="lazy" decoding="async"
+             alt="Campaign user journey map, focused on the roles and the content, audience, build and testing stages">
+      </button>
+      <figcaption class="cap">
+        I synthesized the interviews into a campaign user journey map covering five marketing roles across eight stages. Shown here: the four stages the MVP had to support, from content creation to testing.
+        <br><button class="text-btn" type="button" data-zoom="assets/email-mvp/journey-map-full-4000.webp" data-alt="Full campaign user journey map: eight stages from infrastructure buildout to monitoring and reporting, across five marketing roles">View the full journey map <span aria-hidden="true">↗</span></button>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap mt-xl stack">
+    <h3 class="h3">What we learned, and what changed</h3>
+    <table class="findings">
+      <thead>
+        <tr><th class="label" scope="col">Finding</th><th class="label" scope="col">Decision</th><th class="label" scope="col">Result</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Finding"><span class="icon-tile findings__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="9" height="7" rx="1.5"/><rect x="16" y="14" width="5" height="7" rx="1.5"/></svg></span>Mature marketing teams use their own brand templates and ignore the templates email tools supply.</td>
+          <td data-label="Decision">I recommended minimizing work on predefined templates. The PM agreed.</td>
+          <td data-label="Result">M1 requirements were reprioritized.</td>
+        </tr>
+        <tr>
+          <td data-label="Finding"><span class="icon-tile findings__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.5 2.5L14.8 21a.5.5 0 0 1-.93.03l-3.1-7.8-7.8-3.1a.5.5 0 0 1 .03-.93zM21.5 2.5L10.8 13.2"/></svg></span>Marketers use Send Test on every email they create.</td>
+          <td data-label="Decision">I shared the findings with the PM.</td>
+          <td data-label="Result">The PM prioritized Send Test for M1.</td>
+        </tr>
+        <tr>
+          <td data-label="Finding"><span class="icon-tile findings__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>Marketers prefer large thumbnails to tables, so they can scan email content.</td>
+          <td data-label="Decision">Shipped a table in M1 to meet the deadline, with a plan to revisit.</td>
+          <td data-label="Result">A new card layout is in the works. <a href="#email-list">See the deep dive.</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 5 · DESIGN DEEP DIVE ============ -->
+<section class="sec" id="deep-dive" aria-labelledby="deep-dive-title">
+  <div class="wrap stack">
+    <p class="eyebrow">Design deep dive</p>
+    <h2 class="h2" id="deep-dive-title">Two decisions, in detail.</h2>
+    <p class="lede">Where complex editing should happen, and how marketers find the email they’re looking for.</p>
+  </div>
+
+  <!-- Topic 1 · Modal vs full page -->
+  <article class="topic wrap" id="full-page-editor" aria-labelledby="topic1-title">
+    <div class="topic__head">
+      <p class="topic__num">01</p>
+      <h3 class="h3" id="topic1-title">Modal editor vs. full-page editor</h3>
+      <p class="body measure">Every complex editor in Treasure AI’s customer data platform opened in a modal. When I started designing Engage Studio, I challenged that pattern for two reasons.</p>
+    </div>
+    <div class="reasons mt-md">
+      <div class="reason">
+        <p class="h4">Users weren’t sure what they could touch.</p>
+        <p class="body">We heard feedback that users were confused about whether they could interact with the content underneath the modal.</p>
+      </div>
+      <div class="reason">
+        <p class="h4">Complex tasks need room.</p>
+        <p class="body">A full-page editor gives marketers more space to focus on the task in front of them.</p>
+      </div>
+    </div>
+  </article>
+
+  <div class="wide mt-lg">
+    <div class="compare">
+      <figure class="shot reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/cdp-modal-editor-2800.webp" data-alt="Before: the journey editor in the customer data platform opens as a modal over the page underneath">
+          <img src="assets/email-mvp/cdp-modal-editor-1600.webp"
+               srcset="assets/email-mvp/cdp-modal-editor-1600.webp 1600w, assets/email-mvp/cdp-modal-editor-2800.webp 2800w"
+               sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
+               width="1600" height="795" loading="lazy" decoding="async"
+               alt="Before: the journey editor in the customer data platform opens as a modal over the page underneath">
+        </button>
+        <figcaption class="cap"><span class="shot__tag">Before</span>The journey editor in the customer data platform: a modal on top of a page that still looks usable.</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-campaign-editor-2800.webp" data-alt="After: the Engage Studio campaign editor uses the full page">
+          <img src="assets/email-mvp/hero-campaign-editor-1600.webp"
+               srcset="assets/email-mvp/hero-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-campaign-editor-2800.webp 2800w"
+               sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
+               width="1600" height="900" loading="lazy" decoding="async"
+               alt="After: the Engage Studio campaign editor uses the full page">
+        </button>
+        <figcaption class="cap"><span class="shot__tag shot__tag--accent">After</span>The Engage Studio campaign editor: a full page, with the steps on the left and the email in focus.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap mt-lg">
+    <div class="grid">
+      <div class="stack-sm">
+        <p class="h4">The decision</p>
+        <p class="body">I explored both a modal and a full-page design, then collected feedback from the UX team. We decided that every complex editor in Engage Studio would use a full page.</p>
+      </div>
+      <div class="stack-sm">
+        <p class="h4">A new pattern for the product</p>
+        <p class="body">Full-page editing was new to the product, so I built it alongside the Diamond Design System work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic 2 · Email list -->
+  <article class="topic wrap" id="email-list" aria-labelledby="topic2-title">
+    <div class="topic__head">
+      <p class="topic__num">02</p>
+      <h3 class="h3" id="topic2-title">Email list: from table to cards</h3>
+      <p class="body measure">The research said marketers scan emails by how they look. The deadline said ship what we already had. Here’s how I handled both.</p>
+    </div>
+    <ol class="timeline mt-md">
+      <li>
+        <p class="label">Nov 2024 · Research</p>
+        <p class="body">Marketers preferred large thumbnails so they could scan email content.</p>
+      </li>
+      <li>
+        <p class="label">Nov 2024 · Explore</p>
+        <p class="body">I explored several list layouts, then agreed with frontend to ship a table for M1. It reused an existing pattern, and the deadline was tight.</p>
+      </li>
+      <li class="is-next">
+        <p class="label">Next</p>
+        <p class="body">A card layout with email previews, now in the works.</p>
+      </li>
+    </ol>
+  </article>
+
+  <div class="wide mt-lg stack" style="gap: clamp(64px, 8vw, 96px)">
+    <figure class="shot reveal">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-m1-table-2800.webp" data-alt="M1 email list shipped as a table with name, subject, merge tags, last updated and updated by">
+        <img src="assets/email-mvp/list-m1-table-1600.webp"
+             srcset="assets/email-mvp/list-m1-table-1600.webp 1600w, assets/email-mvp/list-m1-table-2800.webp 2666w"
+             sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+             width="1600" height="900" loading="lazy" decoding="async"
+             alt="M1 email list shipped as a table with name, subject, merge tags, last updated and updated by">
+      </button>
+      <figcaption class="cap"><span class="shot__tag">M1 · Shipped</span>A table that reused an existing pattern. It was fast to build, but every row looks the same, so you can’t see the email itself.</figcaption>
+    </figure>
+
+    <div class="stack">
+      <p class="h4">Layouts I explored</p>
+      <div class="explore">
+        <figure class="shot reveal">
+          <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-thumbnail-table-2800.webp" data-alt="Exploration A: thumbnails added to each table row">
+            <img src="assets/email-mvp/list-explore-thumbnail-table-1600.webp"
+                 srcset="assets/email-mvp/list-explore-thumbnail-table-1600.webp 1600w, assets/email-mvp/list-explore-thumbnail-table-2800.webp 2666w"
+                 sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Exploration A: thumbnails added to each table row">
+          </button>
+          <figcaption class="cap"><span class="shot__tag">A</span>Thumbnails in the table: adds a preview to each row of the existing pattern.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-preview-pane-2800.webp" data-alt="Exploration B: table with a side panel previewing the selected email">
+            <img src="assets/email-mvp/list-explore-preview-pane-1600.webp"
+                 srcset="assets/email-mvp/list-explore-preview-pane-1600.webp 1600w, assets/email-mvp/list-explore-preview-pane-2800.webp 2666w"
+                 sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Exploration B: table with a side panel previewing the selected email">
+          </button>
+          <figcaption class="cap"><span class="shot__tag">B</span>Table with a preview pane: opens the selected email beside the list for quick review.</figcaption>
+        </figure>
+        <figure class="shot shot--chosen reveal">
+          <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-cards-2800.webp" data-alt="Exploration C: cards with large email previews">
+            <img src="assets/email-mvp/list-explore-cards-1600.webp"
+                 srcset="assets/email-mvp/list-explore-cards-1600.webp 1600w, assets/email-mvp/list-explore-cards-2800.webp 2666w"
+                 sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Exploration C: cards with large email previews">
+          </button>
+          <figcaption class="cap"><span class="shot__tag shot__tag--accent">C · Direction</span>Cards with large previews: leads with what the email looks like, matching how marketers scan.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <figure class="shot reveal">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/templates-today-2800.webp" data-alt="The Email Templates list in Engage Studio today, with the current navigation">
+        <img src="assets/email-mvp/templates-today-1600.webp"
+             srcset="assets/email-mvp/templates-today-1600.webp 1600w, assets/email-mvp/templates-today-2800.webp 2800w"
+             sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+             width="1600" height="856" loading="lazy" decoding="async"
+             alt="The Email Templates list in Engage Studio today, with the current navigation">
+      </button>
+      <figcaption class="cap"><span class="shot__tag">Today</span>The email template list in Engage Studio today. The card layout is next.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap mt-lg">
+    <div class="grid">
+      <div class="stack-sm">
+        <p class="h4">Why a table first</p>
+        <p class="body">It reused an existing pattern, so frontend could build it quickly. For M1, shipping on time mattered more than the ideal layout, as long as the next step was planned.</p>
+      </div>
+      <div class="stack-sm">
+        <p class="h4">Why cards next</p>
+        <p class="body">Marketers recognize an email by how it looks. A preview needs more space than a table row can give, and cards give it that space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · NAMING AND NAVIGATION ============ -->
+<section class="sec sec--alt" id="naming" aria-labelledby="naming-title">
+  <div class="wrap stack">
+    <p class="eyebrow">Information architecture</p>
+    <h2 class="h2" id="naming-title">Evolving the navigation as Engage Studio grew.</h2>
+    <p class="lede">Over 15 months, Engage Studio added admin permissions, a second campaign type and a new channel. Each time, I reorganized the navigation around how marketers think about their work, not how the system is built.</p>
+    <p class="body measure">I used terms marketers already know, and when I couldn’t reach customers directly, I brought in GTM and Product Marketing.</p>
+  </div>
+
+  <!-- Overview: the left nav at each stage -->
+  <div class="wide mt-lg">
+    <figure class="nav-evo reveal" aria-labelledby="nav-evo-title">
+      <div class="chart__head">
+        <p class="h4" id="nav-evo-title">The Engage Studio navigation at each stage</p>
+        <p class="cap nav-evo__legend"><span class="nav-evo__mark nav-evo__mark--new">New</span><span class="nav-evo__mark nav-evo__mark--renamed">Renamed</span><span class="nav-evo__mark nav-evo__mark--planned">Planned</span></p>
+      </div>
+      <ol class="nav-evo__cols">
+        <li class="nav-evo__col">
+          <p class="label">Oct 2024 · M1</p>
+          <ul class="nav-evo__tree">
+            <li class="nav-evo__group">Campaigns<ul><li>Campaigns</li></ul></li>
+            <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
+            <li class="nav-evo__group">Settings<ul><li>Sending Configurations</li></ul></li>
+          </ul>
+        </li>
+        <li class="nav-evo__col">
+          <p class="label">Jun 2025 · Permissions</p>
+          <ul class="nav-evo__tree">
+            <li class="nav-evo__header is-new">Header: Engage Studio Configurations <span class="nav-evo__note">admins only</span></li>
+            <li class="nav-evo__group">Campaigns<ul><li>Campaigns</li></ul></li>
+            <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
+            <li class="nav-evo__group">Settings<ul><li class="is-renamed">Sender Profiles</li></ul></li>
+          </ul>
+        </li>
+        <li class="nav-evo__col">
+          <p class="label">Oct 2025 · Always-on</p>
+          <ul class="nav-evo__tree">
+            <li class="nav-evo__header">Header: Engage Studio Configurations</li>
+            <li class="nav-evo__group">Campaigns<ul><li class="is-new">Always-on Campaigns</li><li class="is-renamed">One-off Campaigns</li></ul></li>
+            <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
+            <li class="nav-evo__group">Settings<ul><li>Sender Profiles</li></ul></li>
+          </ul>
+        </li>
+        <li class="nav-evo__col">
+          <p class="label label--accent">Jan 2026 · In-app</p>
+          <ul class="nav-evo__tree">
+            <li class="nav-evo__header">Header: Engage Studio Configurations</li>
+            <li class="nav-evo__group"><span class="is-renamed">Outbound Campaigns</span><ul><li>Always-on Campaigns</li><li>One-off Campaigns</li></ul></li>
+            <li class="nav-evo__group"><span class="is-new">In-product Experiences</span><ul><li class="is-new">In-App Messages</li><li class="is-planned">In-Browser Messages</li><li class="is-planned">Content Cards</li></ul></li>
+            <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
+            <li class="nav-evo__group">Settings<ul><li>Sender Profiles</li></ul></li>
+          </ul>
+        </li>
+      </ol>
+    </figure>
+  </div>
+
+  <!-- Starting point -->
+  <article class="stage wrap" aria-labelledby="stage0-title">
+    <p class="label">Oct 2024 · Starting point</p>
+    <h3 class="h3" id="stage0-title">One left nav for everything</h3>
+    <p class="body measure">The M1 navigation followed the existing Customer Data Platform pattern: one left nav holding every feature, including Campaigns and Email templates. It worked for one user role and one campaign type.</p>
+  </article>
+  <div class="wide mt-md">
+    <figure class="shot reveal">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-oct-2024-original-2800.webp" data-alt="Oct 2024: the M1 left nav with Campaigns, Templates and Settings groups">
+        <img src="assets/email-mvp/nav-oct-2024-original-1600.webp"
+             srcset="assets/email-mvp/nav-oct-2024-original-1600.webp 1600w, assets/email-mvp/nav-oct-2024-original-2800.webp 2800w"
+             sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+             width="1600" height="900" loading="lazy" decoding="async"
+             alt="Oct 2024: the M1 left nav with Campaigns, Templates and Settings groups">
+      </button>
+      <figcaption class="cap"><span class="shot__tag">Oct 2024 · M1</span>Every feature, for every role, in one left nav.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Stage 1 · Permissions -->
+  <article class="stage wrap" aria-labelledby="stage1-title">
+    <p class="label">Jun 2025 · Workspaces and policy-based permissions</p>
+    <h3 class="h3" id="stage1-title">Separate one-time setup from daily work</h3>
+    <div class="pcr mt-md">
+      <div class="pcr__item">
+        <p class="label">Problem</p>
+        <p class="body">Admin-only setup, like Workspace and Domain setup, sat next to marketers’ daily work, like Campaigns and Email templates.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label">Decision</p>
+        <p class="body">I moved admin configuration into a header above the left nav and kept the left nav for daily work.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label label--accent">Why</p>
+        <p class="body">It separates what admins set up once from what marketers use every day. I also explored an icon next to the workspace selector as the entry point, but it was too easy to miss, and users might not understand what it meant.</p>
+      </div>
+    </div>
+  </article>
+  <div class="wide mt-lg">
+    <div class="explore">
+      <figure class="shot reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jun-2025-explored-2800.webp" data-alt="Explored: a settings icon next to the workspace selector as the entry point for admin configuration">
+          <img src="assets/email-mvp/nav-jun-2025-explored-1600.webp"
+               srcset="assets/email-mvp/nav-jun-2025-explored-1600.webp 1600w, assets/email-mvp/nav-jun-2025-explored-2800.webp 2800w"
+               sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+               width="1600" height="900" loading="lazy" decoding="async"
+               alt="Explored: a settings icon next to the workspace selector as the entry point for admin configuration">
+        </button>
+        <figcaption class="cap"><span class="shot__tag">Explored</span>A settings icon beside the workspace selector. Too easy to miss, and its meaning wasn’t clear.</figcaption>
+      </figure>
+      <figure class="shot shot--chosen reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jun-2025-admin-2800.webp" data-alt="Shipped, admin view: an Engage Studio Configurations button in the header above the left nav">
+          <img src="assets/email-mvp/nav-jun-2025-admin-1600.webp"
+               srcset="assets/email-mvp/nav-jun-2025-admin-1600.webp 1600w, assets/email-mvp/nav-jun-2025-admin-2800.webp 2800w"
+               sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+               width="1600" height="900" loading="lazy" decoding="async"
+               alt="Shipped, admin view: an Engage Studio Configurations button in the header above the left nav">
+        </button>
+        <figcaption class="cap"><span class="shot__tag shot__tag--accent">Shipped · Admin</span>Configuration lives in the header, apart from the daily work in the left nav.</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jun-2025-non-admin-2800.webp" data-alt="Shipped, non-admin view: the same page without the configuration button">
+          <img src="assets/email-mvp/nav-jun-2025-non-admin-1600.webp"
+               srcset="assets/email-mvp/nav-jun-2025-non-admin-1600.webp 1600w, assets/email-mvp/nav-jun-2025-non-admin-2800.webp 2800w"
+               sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+               width="1600" height="900" loading="lazy" decoding="async"
+               alt="Shipped, non-admin view: the same page without the configuration button">
+        </button>
+        <figcaption class="cap"><span class="shot__tag">Shipped · Non-admin</span>Marketers without admin access see only their daily work.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Stage 2 · Always-on campaigns -->
+  <article class="stage wrap" aria-labelledby="stage2-title">
+    <p class="label">Oct 2025 · Always-on campaigns</p>
+    <h3 class="h3" id="stage2-title">Name campaigns by how long they run</h3>
+    <div class="pcr mt-md">
+      <div class="pcr__item">
+        <p class="label">Problem</p>
+        <p class="body">The PRD named the new type “Live campaign” and the existing type “Batch campaign.” “Live” implied other campaigns weren’t live, and “Batch” described how the system sends, not what the marketer wants.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label">Decision</p>
+        <p class="body">I checked with the GTM team, then proposed “Always-on campaign” and “One-off campaign.” The PM adopted both.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label label--accent">Why</p>
+        <p class="body">Both names describe how long a campaign runs, in plain words marketers already use.</p>
+      </div>
+    </div>
+  </article>
+  <div class="wide mt-lg">
+    <figure class="shot reveal">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-oct-2025-final-2800.webp" data-alt="Oct 2025: the left nav with Always-on Campaigns and One-off Campaigns under Campaigns">
+        <img src="assets/email-mvp/nav-oct-2025-final-1600.webp"
+             srcset="assets/email-mvp/nav-oct-2025-final-1600.webp 1600w, assets/email-mvp/nav-oct-2025-final-2800.webp 2800w"
+             sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+             width="1600" height="900" loading="lazy" decoding="async"
+             alt="Oct 2025: the left nav with Always-on Campaigns and One-off Campaigns under Campaigns">
+      </button>
+      <figcaption class="cap"><span class="shot__tag shot__tag--accent">Oct 2025 · Shipped</span>Always-on and One-off campaigns, side by side under Campaigns.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Stage 3 · In-app messages -->
+  <article class="stage wrap" aria-labelledby="stage3-title">
+    <p class="label">Jan 2026 · In-app messages</p>
+    <h3 class="h3" id="stage3-title">Make room for a channel that isn’t a campaign</h3>
+    <div class="pcr mt-md">
+      <div class="pcr__item">
+        <p class="label">Problem</p>
+        <p class="body">In-app messages are triggered by a user event and appear in the customer’s mobile app, so they fit neither campaign type. More features like this were on the roadmap.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label">Decision</p>
+        <p class="body">I added a new nav section. I proposed “In-product campaigns”; Product Marketing suggested “In-product experience,” and I went with it.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label label--accent">Why</p>
+        <p class="body">As the product grows, the section needs to hold more than campaigns, such as content cards and transactional experiences.</p>
+      </div>
+    </div>
+  </article>
+  <div class="wide mt-lg">
+    <div class="compare compare--natural">
+      <figure class="shot reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jan-2026-structure-2800.webp" data-alt="Information structure proposed to Product Marketing: Campaigns split into Outbound Campaigns, with one-off and always-on types across channels, and on-site and in-app campaigns">
+          <img src="assets/email-mvp/nav-jan-2026-structure-1600.webp"
+               srcset="assets/email-mvp/nav-jan-2026-structure-1600.webp 1600w, assets/email-mvp/nav-jan-2026-structure-2800.webp 2110w"
+               sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
+               width="1600" height="723" loading="lazy" decoding="async"
+               alt="Information structure proposed to Product Marketing: Campaigns split into Outbound Campaigns, with one-off and always-on types across channels, and on-site and in-app campaigns">
+        </button>
+        <figcaption class="cap"><span class="shot__tag">Proposed to Product Marketing</span>The information structure I brought to Product Marketing: outbound campaigns on one branch, in-product messages on the other.</figcaption>
+      </figure>
+      <figure class="shot shot--chosen reveal">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jan-2026-explored-2800.webp" data-alt="Jan 2026: the left nav with Outbound Campaigns and a new In-product Experiences section holding In-App Messages, In-Browser Messages and Content Cards">
+          <img src="assets/email-mvp/nav-jan-2026-explored-1600.webp"
+               srcset="assets/email-mvp/nav-jan-2026-explored-1600.webp 1600w, assets/email-mvp/nav-jan-2026-explored-2800.webp 2800w"
+               sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
+               width="1600" height="900" loading="lazy" decoding="async"
+               alt="Jan 2026: the left nav with Outbound Campaigns and a new In-product Experiences section holding In-App Messages, In-Browser Messages and Content Cards">
+        </button>
+        <figcaption class="cap"><span class="shot__tag shot__tag--accent">Jan 2026 · Direction</span>The new In-product Experiences section, explored with future features in place to test that it scales.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap mt-xl">
+    <div class="grid">
+      <div class="stack-sm">
+        <p class="h4">Why campaigns aren’t organized by channel</p>
+        <p class="body">Engineering and the PM in Japan decided to keep one-off and always-on campaigns separate, because combining them would significantly increase development cost, and we had promised customers the feature on a tight deadline. I designed the navigation within that constraint.</p>
+      </div>
+      <div class="stack-sm">
+        <p class="h4">Working without customer access</p>
+        <p class="body">I couldn’t talk to customers directly, so GTM and Product Marketing, who work with customers every day, stood in for them. The limitation is that they share our team’s assumptions.</p>
+      </div>
+    </div>
+    <div class="callout mt-lg">
+      <p class="label label--accent">Result</p>
+      <p class="body">The structure absorbed in-app messages without a redesign and has room for content cards and transactional experiences on the roadmap. Since launch, we haven’t heard complaints from customers about the navigation or the new names.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · FITTING DESIGN INTO AN AGILE TEAM ============ -->
+<section class="sec" id="process" aria-labelledby="process-title">
+  <div class="wrap stack">
+    <p class="eyebrow">Process</p>
+    <h2 class="h2" id="process-title">Fitting design into an agile team.</h2>
+    <p class="lede">When engineering’s process changed, I found where design was breaking and fixed it.</p>
+  </div>
+
+  <div class="wrap mt-lg">
+    <div class="pcr">
+      <div class="pcr__item">
+        <p class="label">Problem</p>
+        <p class="body">Several scrum teams, one designer, and priorities set in meetings in Japan. Three mid-to-large projects landed on design at once.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label">Change</p>
+        <p class="body"><span class="pcr__date">Aug 2025.</span> I raised the misalignment with my manager and leadership, and the PM began sharing timelines with me directly.</p>
+        <p class="body"><span class="pcr__date">Sep 2025.</span> I added a “Ready for Dev” status in Figma and a UX changelog in the PRD. Frontend engineers confirmed it helped.</p>
+      </div>
+      <div class="pcr__item">
+        <p class="label label--accent">Result</p>
+        <p class="body"><span class="pcr__date">Jun 2026.</span> At the department offsite, I aligned PM, UX research and design. Design and research now attend roadmap meetings, and design starts 2–3 weeks before engineering.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap mt-lg">
+    <figure class="chart chart--alt reveal" aria-labelledby="chart-title">
+      <div class="chart__head">
+        <p class="h4" id="chart-title">When design starts, relative to engineering</p>
+        <p class="cap">Typical project, in weeks · illustrative</p>
+      </div>
+      <div class="chart__group">
+        <p class="label">Before</p>
+        <div class="track"><div class="bar bar--design-before">Design</div></div>
+        <div class="track"><div class="bar bar--eng-before">Engineering</div></div>
+        <p class="cap">Design and engineering start almost together, so specs change while code is being written.</p>
+      </div>
+      <div class="chart__group">
+        <p class="label label--accent">After</p>
+        <div class="track">
+          <div class="bar bar--piece" style="left:0;width:20.8%"><span class="bar__long">Design&nbsp;</span>1</div>
+          <div class="bar bar--piece" style="left:21.5%;width:16%"><span class="bar__long">Design&nbsp;</span>2</div>
+          <div class="bar bar--piece" style="left:38.2%;width:16%"><span class="bar__long">Design&nbsp;</span>3</div>
+          <div class="bar bar--iterate" style="left:54.9%;width:32.6%">Iterate<span class="bar__long">&nbsp;with engineering</span></div>
+        </div>
+        <div class="track">
+          <div class="bar bar--build" style="left:20.8%;width:20.3%"><span class="bar__long">Build&nbsp;</span>1</div>
+          <div class="bar bar--build" style="left:41.8%;width:20.3%"><span class="bar__long">Build&nbsp;</span>2</div>
+          <div class="bar bar--build" style="left:62.8%;width:24.7%"><span class="bar__long">Build&nbsp;</span>3</div>
+        </div>
+        <p class="cap">Design starts 2–3 weeks ahead, then hands off one piece at a time, each marked “Ready for Dev,” so engineering is never blocked. I keep iterating while they build.</p>
+      </div>
+      <div class="chart__axis" aria-hidden="true">
+        <span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span><span>W9</span><span>W10</span><span>W11</span><span>W12</span>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 8 · RESULTS ============ -->
+<section class="sec sec--tint" id="results" aria-labelledby="results-title">
+  <div class="wrap stack">
+    <p class="eyebrow">Results</p>
+    <h2 class="h2" id="results-title">What changed.</h2>
+  </div>
+  <div class="wrap mt-lg">
+    <div class="stats">
+      <div class="stat">
+        <p class="stat__num">64</p>
+        <p class="stat__desc">enterprise accounts have adopted Engage Studio since its launch</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">45.11M</p>
+        <p class="stat__desc">emails sent every week, and still increasing</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num stat__num--word">Core product</p>
+        <p class="stat__desc">Engage Studio is quickly becoming the company’s new core product</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap mt-xl">
+    <blockquote class="quote">
+      <p>Shiyue has shown initiative by conducting user interviews with the marketing team independently. This proactive approach to understanding users and market needs has greatly contributed to the smooth development process.</p>
+      <footer>Lead Product Manager, Engage Studio</footer>
+    </blockquote>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- Hidden until the next case study is ready; restore and point href at its file.
+    <div class="next">
+      <p class="label">Next case study</p>
+      <a href="#">Prototyping in code to improve design handoff →</a>
+    </div> -->
+    <p class="cap">© 2026 Shiyue</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <div class="lightbox__bar">
+    <p class="lightbox__caption"></p>
+    <button class="lightbox__close" type="button" aria-label="Close image viewer">×</button>
+  </div>
+  <div class="lightbox__stage">
+    <img alt="">
+  </div>
+</dialog>
+
+<script src="assets/js/case-study.js" defer></script>
+</body>
+</html>

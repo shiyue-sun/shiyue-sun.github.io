@@ -1,0 +1,68 @@
+/* Home (Work) page styles · Shiyue portfolio. Loads after case-study.css. */
+
+/* Layout: who I am pinned on the left, work scrolls on the right */
+.home { display: grid; gap: clamp(40px, 6vw, 96px); grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); padding-top: clamp(56px, 7vw, 96px); align-items: start; }
+.home__side { position: sticky; top: calc(var(--header-h) + 48px); display: flex; flex-direction: column; gap: 24px; }
+.home__name { display: flex; flex-direction: column; gap: 10px; }
+.home__name .h1 { font-size: clamp(44px, 5.4vw, 72px); }
+.home__say { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 17px; line-height: 1.4; color: var(--muted); }
+.home__say span + span::before { content: "·"; margin-right: 10px; color: var(--faint); }
+.home__say [lang="zh-Hans"] { color: var(--ink-2); }
+.home__statement { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.45; letter-spacing: -.012em; color: var(--ink-2); }
+.home__facts { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.home__facts li { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line-soft); font-size: 15px; line-height: 1.45; }
+.home__facts .label { padding-top: 2px; }
+.home__links { display: flex; gap: 24px; font-size: 17px; font-weight: 600; }
+.home__work { display: flex; flex-direction: column; gap: clamp(56px, 7vw, 88px); }
+@media (max-width: 960px) {
+  .home { grid-template-columns: minmax(0, 1fr); }
+  .home__side { position: static; }
+}
+
+/* Project cards */
+.card { display: flex; flex-direction: column; gap: 22px; color: inherit; }
+.card:hover { color: inherit; text-decoration: none; }
+.card__text { display: flex; flex-direction: column; gap: 10px; }
+.card .eyebrow { font-size: 15px; }
+.card__cta { margin-top: 6px; font-size: 17px; font-weight: 600; color: var(--link); }
+.card:hover .card__cta { color: var(--link-hover); text-decoration: underline; }
+
+.mini-stats { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 6px; }
+.mini-stats div { display: flex; flex-direction: column; gap: 2px; }
+.mini-stats strong { font-size: 24px; font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
+.mini-stats span { font-size: 13px; line-height: 1.4; color: var(--muted); }
+
+/* Hero visual: a cropped screenshot in a browser window that bleeds off the tile's right and bottom edges */
+.browser-tile { position: relative; overflow: hidden; aspect-ratio: 16 / 10.5; border-radius: var(--radius); background: var(--bg-tint); }
+.browser {
+  position: absolute; left: 7%; top: 9%; width: 165%;
+  border-radius: 12px 0 0 0; overflow: hidden; background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 24px 60px rgba(0, 40, 100, .14);
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+}
+.card:hover .browser { transform: translate(-4px, -6px); }
+.browser__bar { display: flex; align-items: center; gap: 16px; height: clamp(26px, 3vw, 40px); padding: 0 clamp(10px, 1.4vw, 18px); background: #F1F1F4; border-bottom: 1px solid #E3E3E8; }
+.browser__dots { display: flex; gap: clamp(5px, .6vw, 8px); flex: 0 0 auto; }
+.browser__dots i { width: clamp(7px, .8vw, 11px); aspect-ratio: 1; border-radius: 50%; background: #FF5F57; }
+.browser__dots i:nth-child(2) { background: #FEBC2E; }
+.browser__dots i:nth-child(3) { background: #28C840; }
+.browser__url { flex: 0 1 38%; height: 58%; margin-left: 6%; border-radius: 6px; background: #fff; border: 1px solid #E3E3E8; display: flex; align-items: center; padding-left: 8px; }
+.browser__url svg { width: clamp(7px, .7vw, 10px); height: auto; color: var(--faint); }
+.browser img { width: 100%; height: auto; }
+
+/* Work-in-progress card: not linked yet */
+.card--wip { cursor: default; }
+.card--wip .h3 { color: var(--ink-2); }
+.wip-tile {
+  aspect-ratio: 16 / 10.5; border-radius: var(--radius); border: 1.5px dashed #C7C7CC; background: #FBFBFD;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 24px;
+}
+.wip-tile p { font-size: 15px; color: var(--muted); }
+.tag { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--bg-alt); font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); }
+.tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #FF9F0A; }
+.wip-tile .tag { align-self: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .browser { transition: none; }
+  .card:hover .browser { transform: none; }
+}
