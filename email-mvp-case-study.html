@@ -11,11 +11,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="From segment to send · Engage Studio case study">
 <meta property="og:description" content="Designing Treasure AI’s first email campaign product as the sole designer.">
-<meta property="og:image" content="assets/email-mvp/hero-campaign-editor-1600.webp">
+<meta property="og:image" content="assets/email-mvp/hero-email-campaign-editor-1600.webp">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D1D1F'/%3E%3Ctext x='16' y='22.5' font-family='-apple-system,Helvetica,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-<link rel="preload" as="image" href="assets/email-mvp/hero-campaign-editor-1600.webp" imagesrcset="assets/email-mvp/hero-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-campaign-editor-2800.webp 2800w" imagesizes="(min-width: 1400px) 1352px, calc(100vw - 48px)">
+<link rel="preload" as="image" href="assets/email-mvp/hero-email-campaign-editor-1600.webp" imagesrcset="assets/email-mvp/hero-email-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-email-campaign-editor-2800.webp 2800w" imagesizes="(min-width: 1400px) 1352px, calc(100vw - 48px)">
 <link rel="stylesheet" href="assets/css/case-study.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -86,15 +86,68 @@
 
   <div class="hero__visual">
     <div class="wide">
-      <figure class="shot shot--hero reveal">
-        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-campaign-editor-2800.webp" data-alt="Engage Studio campaign editor: a full-page editor with campaign steps on the left and the email content in focus">
-          <img src="assets/email-mvp/hero-campaign-editor-1600.webp"
-               srcset="assets/email-mvp/hero-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-campaign-editor-2800.webp 2800w"
-               sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
-               width="1600" height="900" fetchpriority="high"
-               alt="Engage Studio campaign editor: a full-page editor with campaign steps on the left and the email content in focus">
-        </button>
-        <figcaption class="cap">The Engage Studio campaign editor.</figcaption>
+      <figure class="shot shot--hero carousel reveal" aria-roledescription="carousel" aria-label="Engage Studio screens">
+        <div class="carousel__track" tabindex="0">
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 4: Email campaign editor" data-caption="The Engage Studio email campaign editor.">
+            <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-email-campaign-editor-2800.webp" data-alt="Engage Studio email campaign editor: a full-page editor with campaign steps on the left and the email content in focus">
+              <img src="assets/email-mvp/hero-email-campaign-editor-1600.webp"
+                   srcset="assets/email-mvp/hero-email-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-email-campaign-editor-2800.webp 2800w"
+                   sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+                   width="1600" height="900" fetchpriority="high"
+                   alt="Engage Studio email campaign editor: a full-page editor with campaign steps on the left and the email content in focus">
+            </button>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Asset library" data-caption="The asset library, where teams store and reuse campaign images.">
+            <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-asset-library-2800.webp" data-alt="Engage Studio asset library: folders on the left and a grid of uploaded images with file details">
+              <img src="assets/email-mvp/hero-asset-library-1600.webp"
+                   srcset="assets/email-mvp/hero-asset-library-1600.webp 1600w, assets/email-mvp/hero-asset-library-2800.webp 2800w"
+                   sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+                   width="1600" height="900" loading="lazy" decoding="async"
+                   alt="Engage Studio asset library: folders on the left and a grid of uploaded images with file details">
+            </button>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 4: LINE imagemap editor" data-caption="The LINE imagemap editor, for drawing clickable areas on an image.">
+            <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-line-imagemap-editor-2800.webp" data-alt="LINE imagemap editor: a base image split into clickable areas, with link and position settings for each area">
+              <img src="assets/email-mvp/hero-line-imagemap-editor-1600.webp"
+                   srcset="assets/email-mvp/hero-line-imagemap-editor-1600.webp 1600w, assets/email-mvp/hero-line-imagemap-editor-2800.webp 2800w"
+                   sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+                   width="1600" height="900" loading="lazy" decoding="async"
+                   alt="LINE imagemap editor: a base image split into clickable areas, with link and position settings for each area">
+            </button>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 4: In-app message" data-caption="The in-app message editor, with a live phone preview.">
+            <button class="shot__frame" type="button" data-zoom="assets/email-mvp/hero-in-app-message-2800.webp" data-alt="In-app message editor: message details on the left and a phone preview with appearance settings">
+              <img src="assets/email-mvp/hero-in-app-message-1600.webp"
+                   srcset="assets/email-mvp/hero-in-app-message-1600.webp 1600w, assets/email-mvp/hero-in-app-message-2800.webp 2800w"
+                   sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+                   width="1600" height="900" loading="lazy" decoding="async"
+                   alt="In-app message editor: message details on the left and a phone preview with appearance settings">
+            </button>
+          </div>
+        </div>
+        <div class="carousel__controls">
+          <button class="carousel__arrow" type="button" data-dir="-1" aria-label="Previous screen"><span aria-hidden="true">‹</span></button>
+          <div class="carousel__thumbs">
+            <button class="carousel__thumb" type="button" data-index="0" aria-current="true">
+              <img src="assets/email-mvp/hero-email-campaign-editor-480.webp" width="480" height="270" alt="" decoding="async">
+              <span>Email campaign editor</span>
+            </button>
+            <button class="carousel__thumb" type="button" data-index="1">
+              <img src="assets/email-mvp/hero-asset-library-480.webp" width="480" height="270" alt="" decoding="async">
+              <span>Asset library</span>
+            </button>
+            <button class="carousel__thumb" type="button" data-index="2">
+              <img src="assets/email-mvp/hero-line-imagemap-editor-480.webp" width="480" height="270" alt="" decoding="async">
+              <span>LINE imagemap editor</span>
+            </button>
+            <button class="carousel__thumb" type="button" data-index="3">
+              <img src="assets/email-mvp/hero-in-app-message-480.webp" width="480" height="270" alt="" decoding="async">
+              <span>In-app message</span>
+            </button>
+          </div>
+          <button class="carousel__arrow" type="button" data-dir="1" aria-label="Next screen"><span aria-hidden="true">›</span></button>
+        </div>
+        <figcaption class="cap carousel__caption" aria-live="polite">The Engage Studio email campaign editor.</figcaption>
       </figure>
     </div>
   </div>
@@ -200,7 +253,7 @@
 
   <div class="wrap mt-lg">
     <figure class="shot reveal">
-      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/journey-map-focus-2800.webp" data-alt="Campaign user journey map, focused on the roles and the content, audience, build and testing stages">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/journey-map-full-4000.webp" data-alt="Full campaign user journey map: eight stages from infrastructure buildout to monitoring and reporting, across five marketing roles">
         <img src="assets/email-mvp/journey-map-focus-1600.webp"
              srcset="assets/email-mvp/journey-map-focus-1600.webp 1600w, assets/email-mvp/journey-map-focus-2800.webp 2800w"
              sizes="(min-width: 1080px) 1032px, calc(100vw - 48px)"

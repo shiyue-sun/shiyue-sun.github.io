@@ -138,6 +138,41 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 .shot__tag--accent { color: var(--accent); }
 .shot--chosen .shot__frame { outline: 2px solid var(--accent); outline-offset: 4px; }
 
+/* Hero carousel: slides share one grid cell and cross-fade, so the hero shadow is never clipped */
+.carousel__track { display: grid; gap: 40px; border-radius: 18px; touch-action: pan-y; }
+.carousel__track:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+.js .carousel__track { gap: 0; }
+.js .carousel__slide { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity .45s ease, visibility 0s linear .45s; }
+.js .carousel__slide.is-active { opacity: 1; visibility: visible; transition: opacity .45s ease; }
+.carousel__controls { display: none; }
+.js .carousel__controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 8px; }
+.carousel__thumbs { position: relative; min-width: 0; display: flex; gap: 12px; overflow-x: auto; scrollbar-width: none; padding: 4px; }
+.carousel__thumbs::-webkit-scrollbar { display: none; }
+.carousel__thumb {
+  flex: 0 0 auto; width: 148px; display: flex; flex-direction: column; gap: 8px; padding: 0;
+  border: 0; background: none; font: inherit; cursor: pointer; text-align: center;
+}
+.carousel__thumb img {
+  width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, .08); background: #fff; opacity: .55; transition: opacity .2s, box-shadow .2s;
+}
+.carousel__thumb span { font-size: 13px; line-height: 1.3; color: var(--muted); transition: color .2s; }
+.carousel__thumb:hover img { opacity: .85; }
+.carousel__thumb[aria-current="true"] img { opacity: 1; box-shadow: 0 0 0 2px var(--accent); }
+.carousel__thumb[aria-current="true"] span { color: var(--ink); font-weight: 600; }
+.carousel__thumb:focus-visible { outline: none; }
+.carousel__thumb:focus-visible img { box-shadow: 0 0 0 2px var(--bg-alt), 0 0 0 4px var(--accent); }
+.carousel__arrow {
+  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); cursor: pointer;
+  background: var(--bg); color: var(--ink); font-size: 24px; line-height: 1; padding-bottom: 3px; transition: background .2s;
+}
+.carousel__arrow:hover { background: var(--line-soft); }
+.carousel__arrow:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 720px) {
+  .carousel__arrow { display: none; }
+  .carousel__thumb { width: 112px; }
+}
+
 .text-btn {
   display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 0;
   background: none; border: 0; font: inherit; font-size: 14px; font-weight: 600; color: var(--link); cursor: pointer;
@@ -330,6 +365,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .shot__frame img { transition: none; }
+  .js .carousel__slide, .js .carousel__slide.is-active { transition: none; }
 }
 
 @media (max-width: 560px) {

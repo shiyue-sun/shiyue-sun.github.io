@@ -41,6 +41,70 @@
     });
   }
 
+  // Hero carousel: thumbnails, arrows, arrow keys and swipe
+  document.querySelectorAll('.carousel').forEach(function (root) {
+    var slides = root.querySelectorAll('.carousel__slide');
+    var thumbs = root.querySelectorAll('.carousel__thumb');
+    var track = root.querySelector('.carousel__track');
+    var caption = root.querySelector('.carousel__caption');
+    var current = 0;
+
+    var go = function (i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach(function (s, n) {
+        s.classList.toggle('is-active', n === current);
+        s.setAttribute('aria-hidden', n === current ? 'false' : 'true');
+        s.querySelector('button').tabIndex = n === current ? 0 : -1;
+      });
+      thumbs.forEach(function (t, n) {
+        if (n === current) {
+          t.setAttribute('aria-current', 'true');
+          // Keep the active thumbnail in view on narrow screens without scrolling the page
+          var strip = t.parentNode;
+          if (t.offsetLeft < strip.scrollLeft) strip.scrollLeft = t.offsetLeft;
+          else if (t.offsetLeft + t.offsetWidth > strip.scrollLeft + strip.clientWidth) strip.scrollLeft = t.offsetLeft + t.offsetWidth - strip.clientWidth;
+        } else {
+          t.removeAttribute('aria-current');
+        }
+      });
+      if (caption) caption.textContent = slides[current].getAttribute('data-caption') || '';
+    };
+
+    thumbs.forEach(function (t) {
+      t.addEventListener('click', function () { go(+t.getAttribute('data-index')); });
+    });
+    root.querySelectorAll('.carousel__arrow').forEach(function (b) {
+      b.addEventListener('click', function () { go(current + +b.getAttribute('data-dir')); });
+    });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+    });
+
+    // Swipe on touch screens; a tap still opens the lightbox
+    var startX = null, startY = 0;
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
+      startX = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        e.preventDefault();
+        go(current + (dx < 0 ? 1 : -1));
+      }
+    });
+
+    // Fetch the other screens once the page has loaded, so switching is instant
+    window.addEventListener('load', function () {
+      root.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+    });
+
+    go(0);
+  });
+
   // Reading progress
   var bar = document.querySelector('.progress');
   if (bar) {
