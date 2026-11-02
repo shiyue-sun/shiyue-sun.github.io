@@ -16,7 +16,7 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D1D1F'/%3E%3Ctext x='16' y='22.5' font-family='-apple-system,Helvetica,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preload" as="image" href="assets/email-mvp/hero-email-campaign-editor-1600.webp" imagesrcset="assets/email-mvp/hero-email-campaign-editor-1600.webp 1600w, assets/email-mvp/hero-email-campaign-editor-2800.webp 2800w" imagesizes="(min-width: 1400px) 1352px, calc(100vw - 48px)">
-<link rel="stylesheet" href="assets/css/case-study.css?v=2">
+<link rel="stylesheet" href="assets/css/case-study.css?v=4">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -77,7 +77,7 @@
           <span class="cap">emails sent weekly, and still increasing</span>
         </div>
         <div class="summary__stat">
-          <span class="summary__num">Core</span>
+          <span class="summary__num">Core Product</span>
           <span class="cap">quickly becoming the company’s new core product</span>
         </div>
       </div>
@@ -224,30 +224,32 @@
 <section class="sec sec--alt" id="research" aria-labelledby="research-title">
   <div class="wrap stack">
     <p class="eyebrow">Research</p>
-    <h2 class="h2" id="research-title">Research with the people available.</h2>
-    <p class="lede">With no researcher, I ran small interviews in Nov 2024, named the bias openly, and turned what I heard into product decisions.</p>
+    <h2 class="h2" id="research-title">Research with the people available: our own marketers.</h2>
+    <p class="lede">With no researcher and no direct access to customers, I interviewed Treasure AI’s internal marketers in Nov 2024, named the bias openly, and turned what I heard into product decisions.</p>
   </div>
 
   <div class="wrap mt-lg stack">
+    <p class="h4">Who I talked to: Treasure AI employees, not external customers</p>
     <ul class="people">
       <li class="person">
-        <span class="person__count">1</span>
+        <div class="person__head"><span class="person__count">1</span><span class="person__tag">Internal</span></div>
         <p class="h4">Sr. Director of Growth Marketing</p>
+        <p class="cap">Treasure AI marketing team</p>
       </li>
       <li class="person">
-        <span class="person__count">1</span>
+        <div class="person__head"><span class="person__count">1</span><span class="person__tag">Internal</span></div>
         <p class="h4">Sales engineer</p>
         <p class="cap">A decade of experience selling marketing automation tools</p>
       </li>
       <li class="person">
-        <span class="person__count">3</span>
+        <div class="person__head"><span class="person__count">3</span><span class="person__tag">Internal</span></div>
         <p class="h4">Marketers in the US and Japan</p>
-        <p class="cap">Tested the M1 prototype</p>
+        <p class="cap">Treasure AI marketing team. Tested the M1 prototype</p>
       </li>
     </ul>
     <div class="callout">
       <p class="label label--accent">The bias I named</p>
-      <p class="body">The participants worked at the same company and used the same tool, Marketo. I weighed their preferences with that in mind instead of treating them as universal.</p>
+      <p class="body">Every participant worked at Treasure AI and used the same tool, Marketo, so they couldn’t speak for all our customers. I weighed their preferences with that in mind instead of treating them as universal.</p>
     </div>
   </div>
 
@@ -269,7 +271,12 @@
 
   <div class="wrap mt-xl stack">
     <h3 class="h3">What we learned, and what changed</h3>
-    <table class="findings">
+    <div class="findings-group">
+      <div class="stack-sm">
+        <h4 class="h4" id="findings-strategy">Influence on strategy and roadmap</h4>
+        <p class="cap">Research changed what we built for M1.</p>
+      </div>
+      <table class="findings" aria-labelledby="findings-strategy">
       <thead>
         <tr><th class="label" scope="col">Finding</th><th class="label" scope="col">Decision</th><th class="label" scope="col">Result</th></tr>
       </thead>
@@ -284,13 +291,28 @@
           <td data-label="Decision">I shared the findings with the product manager.</td>
           <td data-label="Result">The product manager prioritized Send Test for M1.</td>
         </tr>
+      </tbody>
+      </table>
+    </div>
+
+    <div class="findings-group mt-md">
+      <div class="stack-sm">
+        <h4 class="h4" id="findings-design">Influence on design</h4>
+        <p class="cap">Research set the direction for how marketers browse their emails.</p>
+      </div>
+      <table class="findings" aria-labelledby="findings-design">
+      <thead>
+        <tr><th class="label" scope="col">Finding</th><th class="label" scope="col">Decision</th><th class="label" scope="col">Result</th></tr>
+      </thead>
+      <tbody>
         <tr>
           <td data-label="Finding"><span class="icon-tile findings__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>Marketers prefer large thumbnails to tables, so they can scan email content.</td>
           <td data-label="Decision">Shipped a table in M1 to meet the deadline, with a plan to revisit.</td>
           <td data-label="Result">A new card layout is in the works. <a href="#email-list">See the deep dive.</a></td>
         </tr>
       </tbody>
-    </table>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -364,44 +386,47 @@
     <div class="topic__head">
       <p class="topic__num">02</p>
       <h3 class="h3" id="topic2-title">Email list: from table to cards</h3>
-      <p class="body measure">The research said marketers scan emails by how they look. The deadline said ship what we already had. Here’s how I handled both.</p>
+      <p class="body measure">The research said marketers scan emails by how they look. The deadline said ship what we already had. So the list started as a table, and what marketers told me is moving it to cards.</p>
     </div>
-    <ol class="timeline mt-md">
-      <li>
-        <p class="label">Nov 2024 · Research</p>
-        <p class="body">Marketers preferred large thumbnails so they could scan email content.</p>
-      </li>
-      <li>
-        <p class="label">Nov 2024 · Explore</p>
-        <p class="body">I explored several list layouts, then agreed with frontend to ship a table for M1. It reused an existing pattern, and the deadline was tight.</p>
-      </li>
-      <li class="is-next">
-        <p class="label">Next</p>
-        <p class="body">A card layout with email previews, now in the works.</p>
-      </li>
-    </ol>
   </article>
 
-  <div class="wide mt-lg stack" style="gap: clamp(64px, 8vw, 96px)">
-    <figure class="shot reveal">
-      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-m1-table-2800.webp" data-alt="M1 email list shipped as a table with name, subject, merge tags, last updated and updated by">
-        <img src="assets/email-mvp/list-m1-table-1600.webp"
-             srcset="assets/email-mvp/list-m1-table-1600.webp 1600w, assets/email-mvp/list-m1-table-2800.webp 2666w"
-             sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
-             width="1600" height="900" loading="lazy" decoding="async"
-             alt="M1 email list shipped as a table with name, subject, merge tags, last updated and updated by">
-      </button>
-      <figcaption class="cap"><span class="shot__tag">M1 · Shipped</span>A table that reused an existing pattern. It was fast to build, but every row looks the same, so you can’t see the email itself.</figcaption>
-    </figure>
-
-    <div class="stack">
-      <p class="h4">Layouts I explored</p>
-      <div class="explore">
+  <div class="wide mt-lg">
+    <ol class="iter">
+      <li class="iter__step">
+        <div class="iter__head">
+          <p class="label">Step 1 · M1 · Shipped</p>
+          <p class="h3">Start with a table</p>
+        </div>
+        <figure class="shot reveal">
+          <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-m1-table-2800.webp" data-alt="M1 email list shipped as a table with name, subject, merge tags, last updated and updated by">
+            <img src="assets/email-mvp/list-m1-table-1600.webp"
+                 srcset="assets/email-mvp/list-m1-table-1600.webp 1600w, assets/email-mvp/list-m1-table-2800.webp 2666w"
+                 sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="M1 email list shipped as a table with name, subject, merge tags, last updated and updated by">
+          </button>
+          <figcaption class="cap"><span class="shot__tag">M1</span>It reused an existing pattern and was fast to build, so we shipped it to meet the deadline. But every row looks the same, so you can’t see the email itself.</figcaption>
+        </figure>
+      </li>
+      <li class="iter__bridge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        <div class="iter__note">
+          <p class="label label--accent">Research feedback · Nov 2024</p>
+          <p class="h4">Marketers preferred large thumbnails so they could scan email content.</p>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </li>
+      <li class="iter__step">
+        <div class="iter__head">
+          <p class="label">Step 2 · Explored · Nov 2024</p>
+          <p class="h3">Try adding previews to the table</p>
+        </div>
+        <div class="compare">
         <figure class="shot reveal">
           <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-thumbnail-table-2800.webp" data-alt="Exploration A: thumbnails added to each table row">
             <img src="assets/email-mvp/list-explore-thumbnail-table-1600.webp"
                  srcset="assets/email-mvp/list-explore-thumbnail-table-1600.webp 1600w, assets/email-mvp/list-explore-thumbnail-table-2800.webp 2666w"
-                 sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+                 sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
                  width="1600" height="900" loading="lazy" decoding="async"
                  alt="Exploration A: thumbnails added to each table row">
           </button>
@@ -411,35 +436,39 @@
           <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-preview-pane-2800.webp" data-alt="Exploration B: table with a side panel previewing the selected email">
             <img src="assets/email-mvp/list-explore-preview-pane-1600.webp"
                  srcset="assets/email-mvp/list-explore-preview-pane-1600.webp 1600w, assets/email-mvp/list-explore-preview-pane-2800.webp 2666w"
-                 sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+                 sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
                  width="1600" height="900" loading="lazy" decoding="async"
                  alt="Exploration B: table with a side panel previewing the selected email">
           </button>
           <figcaption class="cap"><span class="shot__tag">B</span>Table with a preview pane: opens the selected email beside the list for quick review.</figcaption>
         </figure>
+        </div>
+      </li>
+      <li class="iter__bridge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        <div class="iter__note">
+          <p class="label label--accent">What the explorations showed</p>
+          <p class="h4">A preview needs more space than a table row can give.</p>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </li>
+      <li class="iter__step">
+        <div class="iter__head">
+          <p class="label label--accent">Step 3 · Next · In the works</p>
+          <p class="h3">Move to cards with large previews</p>
+        </div>
         <figure class="shot shot--chosen reveal">
-          <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-cards-2800.webp" data-alt="Exploration C: cards with large email previews">
+          <button class="shot__frame" type="button" data-zoom="assets/email-mvp/list-explore-cards-2800.webp" data-alt="Card layout with large email previews">
             <img src="assets/email-mvp/list-explore-cards-1600.webp"
                  srcset="assets/email-mvp/list-explore-cards-1600.webp 1600w, assets/email-mvp/list-explore-cards-2800.webp 2666w"
-                 sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
+                 sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
                  width="1600" height="900" loading="lazy" decoding="async"
-                 alt="Exploration C: cards with large email previews">
+                 alt="Card layout with large email previews">
           </button>
-          <figcaption class="cap"><span class="shot__tag shot__tag--accent">C · Direction</span>Cards with large previews: leads with what the email looks like, matching how marketers scan.</figcaption>
+          <figcaption class="cap"><span class="shot__tag shot__tag--accent">Direction</span>Leads with what the email looks like, matching how marketers scan.</figcaption>
         </figure>
-      </div>
-    </div>
-
-    <figure class="shot reveal">
-      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/templates-today-2800.webp" data-alt="The Email Templates list in Engage Studio today, with the current navigation">
-        <img src="assets/email-mvp/templates-today-1600.webp"
-             srcset="assets/email-mvp/templates-today-1600.webp 1600w, assets/email-mvp/templates-today-2800.webp 2800w"
-             sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
-             width="1600" height="856" loading="lazy" decoding="async"
-             alt="The Email Templates list in Engage Studio today, with the current navigation">
-      </button>
-      <figcaption class="cap"><span class="shot__tag">Today</span>The email template list in Engage Studio today. The card layout is next.</figcaption>
-    </figure>
+      </li>
+    </ol>
   </div>
 
   <div class="wrap mt-lg">
@@ -461,7 +490,7 @@
   <div class="wrap stack">
     <p class="eyebrow">Information architecture</p>
     <h2 class="h2" id="naming-title">Evolving the navigation as Engage Studio grew.</h2>
-    <p class="lede">Over 15 months, Engage Studio added admin permissions, a second campaign type and a new channel. Each time, I reorganized the navigation around how marketers think about their work, not how the system is built.</p>
+    <p class="lede">Over 17 months, Engage Studio added admin permissions, a second campaign type and a new channel. Each time, I reorganized the navigation around how marketers think about their work, not how the system is built.</p>
     <p class="body measure">I used terms marketers already know, and when I couldn’t reach customers directly, I brought in the go-to-market team and Product Marketing.</p>
   </div>
 
@@ -469,38 +498,45 @@
   <div class="wide wide--xl mt-lg">
     <figure class="nav-evo reveal" aria-labelledby="nav-evo-title">
       <div class="chart__head">
-        <p class="h4" id="nav-evo-title">The Engage Studio navigation at each stage</p>
+        <p class="h4" id="nav-evo-title">How the Engage Studio navigation evolved over 17 months</p>
         <p class="cap nav-evo__legend"><span class="nav-evo__mark nav-evo__mark--new">New</span><span class="nav-evo__mark nav-evo__mark--renamed">Renamed</span><span class="nav-evo__mark nav-evo__mark--planned">Planned</span></p>
       </div>
-      <ol class="nav-evo__cols">
-        <li class="nav-evo__col">
-          <p class="label">Oct 2024 · M1</p>
+      <ol class="tl">
+        <li class="tl__item nav-evo__col">
+          <p class="tl__date">Oct 2024</p>
+          <p class="label">M1</p>
           <ul class="nav-evo__tree">
             <li class="nav-evo__group">Campaigns<ul><li>Campaigns</li></ul></li>
             <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
             <li class="nav-evo__group">Settings<ul><li>Sending Configurations</li></ul></li>
           </ul>
+          <p class="tl__gap">12 months later</p>
         </li>
-        <li class="nav-evo__col">
-          <p class="label">Jun 2025 · Permissions</p>
+        <li class="tl__item nav-evo__col">
+          <p class="tl__date">Oct 2025</p>
+          <p class="label">Permissions</p>
           <ul class="nav-evo__tree">
             <li class="nav-evo__header is-new">Header: Engage Studio Configurations <span class="nav-evo__note">admins only</span></li>
             <li class="nav-evo__group">Campaigns<ul><li>Campaigns</li></ul></li>
             <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
             <li class="nav-evo__group">Settings<ul><li class="is-renamed">Sender Profiles</li></ul></li>
           </ul>
+          <p class="tl__gap">4 months later</p>
         </li>
-        <li class="nav-evo__col">
-          <p class="label">Oct 2025 · Always-on</p>
+        <li class="tl__item nav-evo__col">
+          <p class="tl__date">Feb 2026</p>
+          <p class="label">Always-on</p>
           <ul class="nav-evo__tree">
             <li class="nav-evo__header">Header: Engage Studio Configurations</li>
             <li class="nav-evo__group">Campaigns<ul><li class="is-new">Always-on Campaigns</li><li class="is-renamed">One-off Campaigns</li></ul></li>
             <li class="nav-evo__group">Templates<ul><li>Email Templates</li></ul></li>
             <li class="nav-evo__group">Settings<ul><li>Sender Profiles</li></ul></li>
           </ul>
+          <p class="tl__gap">1 month later</p>
         </li>
-        <li class="nav-evo__col">
-          <p class="label label--accent">Jan 2026 · In-app</p>
+        <li class="tl__item nav-evo__col">
+          <p class="tl__date">Mar 2026</p>
+          <p class="label label--accent">In-app</p>
           <ul class="nav-evo__tree">
             <li class="nav-evo__header">Header: Engage Studio Configurations</li>
             <li class="nav-evo__group"><span class="is-renamed">Outbound Campaigns</span><ul><li>Always-on Campaigns</li><li>One-off Campaigns</li></ul></li>
@@ -534,7 +570,7 @@
 
   <!-- Stage 1 · Permissions -->
   <article class="stage wrap" aria-labelledby="stage1-title">
-    <p class="label">Jun 2025 · Workspaces and policy-based permissions</p>
+    <p class="label">Oct 2025 · Workspaces and policy-based permissions</p>
     <h3 class="h3" id="stage1-title">Separate one-time setup from daily work</h3>
     <div class="pcr mt-md">
       <div class="pcr__item">
@@ -551,44 +587,54 @@
       </div>
     </div>
   </article>
-  <div class="wide mt-lg">
-    <div class="explore">
+  <div class="wide mt-lg stack">
+    <p class="h4">Same page, top of the screen: three ways to handle the admin entry point</p>
+    <div class="strips">
       <figure class="shot reveal">
-        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jun-2025-explored-2800.webp" data-alt="Explored: a settings icon next to the workspace selector as the entry point for admin configuration">
-          <img src="assets/email-mvp/nav-jun-2025-explored-1600.webp"
-               srcset="assets/email-mvp/nav-jun-2025-explored-1600.webp 1600w, assets/email-mvp/nav-jun-2025-explored-2800.webp 2800w"
-               sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
-               width="1600" height="900" loading="lazy" decoding="async"
-               alt="Explored: a settings icon next to the workspace selector as the entry point for admin configuration">
+        <button class="shot__frame strip" type="button" style="--strip-x:0%" data-zoom="assets/email-mvp/nav-jun-2025-explored-2800.webp" data-alt="Explored: a settings icon next to the workspace selector as the entry point for admin configuration">
+          <span class="strip__canvas">
+            <img src="assets/email-mvp/nav-jun-2025-explored-1600.webp"
+                 srcset="assets/email-mvp/nav-jun-2025-explored-1600.webp 1600w, assets/email-mvp/nav-jun-2025-explored-2800.webp 2800w"
+                 sizes="(min-width: 1400px) 1352px, (min-width: 761px) calc(100vw - 48px), 220vw"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Explored: a settings icon next to the workspace selector as the entry point for admin configuration">
+            <span class="strip__mark" style="left:17.6%;top:8.2%;width:2.6%;height:5.2%" aria-hidden="true"><span class="strip__note strip__note--top">Icon only</span></span>
+          </span>
         </button>
         <figcaption class="cap"><span class="shot__tag">Explored</span>A settings icon beside the workspace selector. Too easy to miss, and its meaning wasn’t clear.</figcaption>
       </figure>
       <figure class="shot shot--chosen reveal">
-        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jun-2025-admin-2800.webp" data-alt="Shipped, admin view: an Engage Studio Configurations button in the header above the left nav">
-          <img src="assets/email-mvp/nav-jun-2025-admin-1600.webp"
-               srcset="assets/email-mvp/nav-jun-2025-admin-1600.webp 1600w, assets/email-mvp/nav-jun-2025-admin-2800.webp 2800w"
-               sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
-               width="1600" height="900" loading="lazy" decoding="async"
-               alt="Shipped, admin view: an Engage Studio Configurations button in the header above the left nav">
+        <button class="shot__frame strip" type="button" style="--strip-x:-120%" data-zoom="assets/email-mvp/nav-jun-2025-admin-2800.webp" data-alt="Shipped, admin view: an Engage Studio Configurations button in the header above the left nav">
+          <span class="strip__canvas">
+            <img src="assets/email-mvp/nav-jun-2025-admin-1600.webp"
+                 srcset="assets/email-mvp/nav-jun-2025-admin-1600.webp 1600w, assets/email-mvp/nav-jun-2025-admin-2800.webp 2800w"
+                 sizes="(min-width: 1400px) 1352px, (min-width: 761px) calc(100vw - 48px), 220vw"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Shipped, admin view: an Engage Studio Configurations button in the header above the left nav">
+            <span class="strip__mark" style="left:84%;top:.8%;width:15.6%;height:5%" aria-hidden="true"><span class="strip__note strip__note--left">Labeled button</span></span>
+          </span>
         </button>
-        <figcaption class="cap"><span class="shot__tag shot__tag--accent">Shipped · Admin</span>Configuration lives in the header, apart from the daily work in the left nav.</figcaption>
+        <figcaption class="cap"><span class="shot__tag shot__tag--accent">Shipped · Admin</span>A labeled button in a new header, apart from the daily work in the left nav.</figcaption>
       </figure>
       <figure class="shot reveal">
-        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jun-2025-non-admin-2800.webp" data-alt="Shipped, non-admin view: the same page without the configuration button">
-          <img src="assets/email-mvp/nav-jun-2025-non-admin-1600.webp"
-               srcset="assets/email-mvp/nav-jun-2025-non-admin-1600.webp 1600w, assets/email-mvp/nav-jun-2025-non-admin-2800.webp 2800w"
-               sizes="(min-width: 1400px) 434px, (min-width: 900px) calc(33vw - 32px), calc(100vw - 48px)"
-               width="1600" height="900" loading="lazy" decoding="async"
-               alt="Shipped, non-admin view: the same page without the configuration button">
+        <button class="shot__frame strip" type="button" style="--strip-x:-120%" data-zoom="assets/email-mvp/nav-jun-2025-non-admin-2800.webp" data-alt="Shipped, non-admin view: the same page without the configuration button">
+          <span class="strip__canvas">
+            <img src="assets/email-mvp/nav-jun-2025-non-admin-1600.webp"
+                 srcset="assets/email-mvp/nav-jun-2025-non-admin-1600.webp 1600w, assets/email-mvp/nav-jun-2025-non-admin-2800.webp 2800w"
+                 sizes="(min-width: 1400px) 1352px, (min-width: 761px) calc(100vw - 48px), 220vw"
+                 width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Shipped, non-admin view: the same page without the configuration button">
+            <span class="strip__mark strip__mark--empty" style="left:84%;top:.8%;width:15.6%;height:5%" aria-hidden="true"><span class="strip__note strip__note--left">No button</span></span>
+          </span>
         </button>
-        <figcaption class="cap"><span class="shot__tag">Shipped · Non-admin</span>Marketers without admin access see only their daily work.</figcaption>
+        <figcaption class="cap"><span class="shot__tag">Shipped · Non-admin</span>The same header with no button. Marketers without admin access see only their daily work.</figcaption>
       </figure>
     </div>
   </div>
 
   <!-- Stage 2 · Always-on campaigns -->
   <article class="stage wrap" aria-labelledby="stage2-title">
-    <p class="label">Oct 2025 · Always-on campaigns</p>
+    <p class="label">Feb 2026 · Always-on campaigns</p>
     <h3 class="h3" id="stage2-title">Name campaigns by how long they run</h3>
     <div class="pcr mt-md">
       <div class="pcr__item">
@@ -607,14 +653,14 @@
   </article>
   <div class="wide mt-lg">
     <figure class="shot reveal">
-      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-oct-2025-final-2800.webp" data-alt="Oct 2025: the left nav with Always-on Campaigns and One-off Campaigns under Campaigns">
+      <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-oct-2025-final-2800.webp" data-alt="Feb 2026: the left nav with Always-on Campaigns and One-off Campaigns under Campaigns">
         <img src="assets/email-mvp/nav-oct-2025-final-1600.webp"
              srcset="assets/email-mvp/nav-oct-2025-final-1600.webp 1600w, assets/email-mvp/nav-oct-2025-final-2800.webp 2800w"
              sizes="(min-width: 1400px) 1352px, calc(100vw - 48px)"
              width="1600" height="900" loading="lazy" decoding="async"
-             alt="Oct 2025: the left nav with Always-on Campaigns and One-off Campaigns under Campaigns">
+             alt="Feb 2026: the left nav with Always-on Campaigns and One-off Campaigns under Campaigns">
       </button>
-      <figcaption class="cap"><span class="shot__tag shot__tag--accent">Oct 2025 · Shipped</span>Always-on and One-off campaigns, side by side under Campaigns.</figcaption>
+      <figcaption class="cap"><span class="shot__tag shot__tag--accent">Feb 2026 · Shipped</span>Always-on and One-off campaigns, side by side under Campaigns.</figcaption>
     </figure>
   </div>
   <div class="wrap mt-lg">
@@ -626,7 +672,7 @@
 
   <!-- Stage 3 · In-app messages -->
   <article class="stage wrap" aria-labelledby="stage3-title">
-    <p class="label">Jan 2026 · In-app messages</p>
+    <p class="label">Mar 2026 · In-app messages</p>
     <h3 class="h3" id="stage3-title">Make room for a channel that isn’t a campaign</h3>
     <div class="pcr mt-md">
       <div class="pcr__item">
@@ -656,14 +702,14 @@
         <figcaption class="cap"><span class="shot__tag">Proposed to Product Marketing</span>The information structure I brought to Product Marketing: outbound campaigns on one branch, in-product messages on the other.</figcaption>
       </figure>
       <figure class="shot shot--chosen reveal">
-        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jan-2026-explored-2800.webp" data-alt="Jan 2026: the left nav with Outbound Campaigns and a new In-product Experiences section holding In-App Messages, In-Browser Messages and Content Cards">
+        <button class="shot__frame" type="button" data-zoom="assets/email-mvp/nav-jan-2026-explored-2800.webp" data-alt="Mar 2026: the left nav with Outbound Campaigns and a new In-product Experiences section holding In-App Messages, In-Browser Messages and Content Cards">
           <img src="assets/email-mvp/nav-jan-2026-explored-1600.webp"
                srcset="assets/email-mvp/nav-jan-2026-explored-1600.webp 1600w, assets/email-mvp/nav-jan-2026-explored-2800.webp 2800w"
                sizes="(min-width: 1400px) 660px, (min-width: 900px) calc(50vw - 40px), calc(100vw - 48px)"
                width="1600" height="900" loading="lazy" decoding="async"
-               alt="Jan 2026: the left nav with Outbound Campaigns and a new In-product Experiences section holding In-App Messages, In-Browser Messages and Content Cards">
+               alt="Mar 2026: the left nav with Outbound Campaigns and a new In-product Experiences section holding In-App Messages, In-Browser Messages and Content Cards">
         </button>
-        <figcaption class="cap"><span class="shot__tag shot__tag--accent">Jan 2026 · Direction</span>The new In-product Experiences section, explored with future features in place to test that it scales.</figcaption>
+        <figcaption class="cap"><span class="shot__tag shot__tag--accent">Mar 2026 · Direction</span>The new In-product Experiences section, explored with future features in place to test that it scales.</figcaption>
       </figure>
     </div>
   </div>
@@ -736,6 +782,78 @@
       <div class="chart__axis" aria-hidden="true">
         <span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span><span>W9</span><span>W10</span><span>W11</span><span>W12</span>
       </div>
+    </figure>
+  </div>
+
+  <div class="wrap mt-lg">
+    <figure class="chart chart--alt shipped reveal" aria-labelledby="shipped-title">
+      <div class="chart__head">
+        <p class="h4" id="shipped-title">Still one designer, more than twice the release pace</p>
+        <p class="cap">Features shipped per month, Nov 2024 – Oct 2026</p>
+      </div>
+      <div class="ship__chart" aria-hidden="true">
+        <div class="ship__months">
+          <span class="ship__month" title="Nov 2024: MVP email template"><span class="ship__block"></span></span>
+          <span class="ship__month" title="Dec 2024: no release"></span>
+          <span class="ship__month" title="Jan 2025: no release"></span>
+          <span class="ship__month" title="Feb 2025: no release"></span>
+          <span class="ship__month" title="Mar 2025: Email domain management"><span class="ship__block"></span></span>
+          <span class="ship__month" title="Apr 2025: no release"></span>
+          <span class="ship__month" title="May 2025: no release"></span>
+          <span class="ship__month" title="Jun 2025: no release"></span>
+          <span class="ship__month" title="Jul 2025: Email campaign, UTM tracking"><span class="ship__block"></span><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--shift" title="Aug 2025: design process adapted to agile"></span>
+          <span class="ship__month ship__month--shift" title="Sep 2025: design process adapted to agile"></span>
+          <span class="ship__month ship__month--after" title="Oct 2025: Workspaces and policy-based permissions"><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="Nov 2025: Mobile push campaign"><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="Dec 2025: no release"></span>
+          <span class="ship__month ship__month--after" title="Jan 2026: no release"></span>
+          <span class="ship__month ship__month--after" title="Feb 2026: Always-on campaign"><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="Mar 2026: In-app message"><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="Apr 2026: LINE OA campaign"><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="May 2026: no release"></span>
+          <span class="ship__month ship__month--after" title="Jun 2026: Asset management"><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="Jul 2026: In-browser message, SMS campaign"><span class="ship__block"></span><span class="ship__block"></span></span>
+          <span class="ship__month ship__month--after" title="Aug 2026: no release"></span>
+          <span class="ship__month ship__month--after" title="Sep 2026: no release"></span>
+          <span class="ship__month ship__month--after" title="Oct 2026: Landing page"><span class="ship__block"></span></span>
+        </div>
+        <div class="ship__axis">
+          <span class="ship__span ship__span--before">Before agile</span>
+          <span class="ship__span ship__span--shift">Agile shift</span>
+          <span class="ship__span ship__span--after">After agile</span>
+        </div>
+      </div>
+      <div class="ship__phases">
+        <div class="ship__phase">
+          <p class="label">Before agile · Nov 2024 – Jul 2025</p>
+          <p class="ship__stat">Every 4 months</p>
+          <p class="cap">A new release on average, with 4 features in 9 months.</p>
+          <ul class="ship__list">
+            <li><span class="ship__date">Nov 2024</span><span>MVP email template</span></li>
+            <li><span class="ship__date">Mar 2025</span><span>Email domain management</span></li>
+            <li><span class="ship__date">Jul 2025</span><span>Email campaign</span></li>
+            <li><span class="ship__date">Jul 2025</span><span>UTM tracking</span></li>
+          </ul>
+        </div>
+        <div class="ship__phase ship__phase--after">
+          <p class="label label--accent">After agile · Oct 2025 – Oct 2026</p>
+          <p class="ship__stat">Every 1.7 months</p>
+          <p class="cap">A new release on average, with 9 features in 13 months.</p>
+          <ul class="ship__list">
+            <li><span class="ship__date">Oct 2025</span><span>Workspaces and policy-based permissions</span></li>
+            <li><span class="ship__date">Nov 2025</span><span>Mobile push campaign</span></li>
+            <li><span class="ship__date">Feb 2026</span><span>Always-on campaign</span></li>
+            <li><span class="ship__date">Mar 2026</span><span>In-app message</span></li>
+            <li><span class="ship__date">Apr 2026</span><span>LINE OA campaign</span></li>
+            <li><span class="ship__date">Jun 2026</span><span>Asset management</span></li>
+            <li><span class="ship__date">Jul 2026</span><span>In-browser message</span></li>
+            <li><span class="ship__date">Jul 2026</span><span>SMS campaign</span></li>
+            <li><span class="ship__date">Oct 2026</span><span>Landing page</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="cap">I remained the sole designer throughout. In Aug–Sep 2025 I adapted the design process to agile, so design kept up as the pace increased.</p>
     </figure>
   </div>
 </section>
